@@ -8,18 +8,25 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#FFEFF7FF">
         <StackPanel Orientation="Vertical" Margin="20">
-            <TextBlock Text="Thư Giãn - Mini Games" FontSize="18" FontWeight="Bold" Margin="0 0 0 10"/>
+            <TextBlock Text="Thư Giãn - Mini Games" FontSize="18" FontWeight="Bold" Margin="0 0 0 10" Foreground="#FF2E7D32"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 10">
-                <Button Content="Bắn Bong Bóng" Width="120" Margin="5" Click="BubbleGame_Click"/>
-                <Button Content="Click Nhanh" Width="120" Margin="5" Click="ClickGame_Click"/>
+                <Button Content="Bắn Bong Bóng" Width="120" Margin="5" Click="BubbleGame_Click" Background="#FF4CAF50" Foreground="White"/>
+                <Button Content="Click Nhanh" Width="120" Margin="5" Click="ClickGame_Click" Background="#FF2196F3" Foreground="White"/>
+                <Button Content="Lật Cặp Hình" Width="120" Margin="5" Click="MemoryGame_Click" Background="#FFFF5722" Foreground="White"/>
             </StackPanel>
-            <TextBlock x:Name="ScoreText" Text="Score: 0" FontSize="14" Margin="10" Foreground="Blue"/>
-            <Canvas x:Name="GameCanvas" Width="760" Height="360" Background="LightBlue" MouseLeftButtonDown="GameCanvas_MouseLeftButtonDown" Visibility="Collapsed"/>
+            <TextBlock x:Name="ScoreText" Text="Score: 0" FontSize="14" Margin="10" Foreground="#FF1976D2"/>
+            <Canvas x:Name="GameCanvas" Width="760" Height="360" Background="#FFE0F7FA" MouseLeftButtonDown="GameCanvas_MouseLeftButtonDown" Visibility="Collapsed"/>
             <StackPanel x:Name="ClickGamePanel" Visibility="Collapsed">
-                <TextBlock x:Name="ClickTimerText" Text="Thời gian: 10s" FontSize="14" Margin="10" Foreground="Green"/>
-                <Button x:Name="ClickButton" Content="Click!" Width="100" Height="100" FontSize="20" Click="ClickButton_Click"/>
-                <TextBlock x:Name="ClickCountText" Text="Số lần click: 0" FontSize="14" Margin="10" Foreground="Red"/>
-                <TextBlock x:Name="HighScoreText" Text="Kỉ lục: 0" FontSize="14" Margin="10" Foreground="Purple"/>
+                <TextBlock x:Name="ClickTimerText" Text="Thời gian: 10s" FontSize="14" Margin="10" Foreground="#FF388E3C"/>
+                <Button x:Name="ClickButton" Content="Click!" Width="100" Height="100" FontSize="20" Click="ClickButton_Click" Background="#FFF06292" Foreground="White"/>
+                <TextBlock x:Name="ClickCountText" Text="Số lần click: 0" FontSize="14" Margin="10" Foreground="#FFD81B60"/>
+                <TextBlock x:Name="HighScoreText" Text="Kỉ lục: 0" FontSize="14" Margin="10" Foreground="#FF6A1B9A"/>
+            </StackPanel>
+            <StackPanel x:Name="MemoryGamePanel" Visibility="Collapsed">
+                <TextBlock x:Name="MemoryStatusText" Text="Tìm cặp hình!" FontSize="14" Margin="10" Foreground="#FF388E3C"/>
+                <Border BorderBrush="#FF90CAF9" BorderThickness="2" CornerRadius="5" Background="#FFF5F5F5">
+                    <UniformGrid x:Name="MemoryGrid" Columns="4" Width="760" Height="320" Margin="10"/>
+                </Border>
             </StackPanel>
         </StackPanel>
     </Grid>
