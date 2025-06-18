@@ -20,9 +20,7 @@
             <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     Margin="10">
-                <Button Content="Live Monitor"
-                    Width="120" Margin="5"
-                    Click="LiveMonitor_Click"/>
+               
                 <Button Content="Stress Analysis"
                     Width="120" Margin="5"
                     Click="StressAnalysis_Click"/>
