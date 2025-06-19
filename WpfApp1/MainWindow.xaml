@@ -10,7 +10,7 @@
         <StackPanel Orientation="Vertical">
 
      
-            <TextBlock Text="Ứng dụng Theo Dõi Stress và Thư Giãn"
+            <TextBlock Text="Ứng dụng Theo Dõi Stress va Thư Giãn"
                    FontSize="24"
                    FontWeight="Bold"
                    Margin="10"
