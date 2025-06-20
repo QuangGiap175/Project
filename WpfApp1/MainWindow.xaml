@@ -57,7 +57,7 @@
 
                 <!-- Nội dung động -->
                 <Frame x:Name="MainContent"
-                       Width="500"
+                       Width="Auto"
                        Height="Auto"
                        Background="#FAFAFA"
                        BorderThickness="0"/>
