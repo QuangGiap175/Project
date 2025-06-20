@@ -5,34 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Ứng dụng Stress và Thư Giãn" Height="500" Width="850" WindowStartupLocation="CenterScreen"
+        Background="#f0f4f8">
     <Grid>
-        <StackPanel Orientation="Vertical">
+        <!-- Nền gradient nhẹ -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#e0f7fa" Offset="0.0"/>
+                <GradientStop Color="#ffffff" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
 
-     
-            <TextBlock Text="Ứng dụng Theo Dõi Stress va Thư Giãn"
-                   FontSize="24"
-                   FontWeight="Bold"
-                   Margin="10"
-                   HorizontalAlignment="Center"/>
+        <!-- Khối nội dung chính -->
+        <Border Background="White" CornerRadius="15" Padding="20"
+                Margin="30">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
 
-            <!-- Điều hướng giữa các tab -->
-            <StackPanel Orientation="Horizontal"
-                    HorizontalAlignment="Center"
-                    Margin="10">
-                <Button Content="Live Monitor"
-                    Width="120" Margin="5"
-                    Click="LiveMonitor_Click"/>
-                <Button Content="Stress Analysis"
-                    Width="120" Margin="5"
-                    Click="StressAnalysis_Click"/>
-                <Button Content="Relax Zone"
-                    Width="120" Margin="5"
-                    Click="RelaxZone_Click"/>
+                <!-- Tiêu đề -->
+                <TextBlock Text="Ứng dụng Theo Dõi Stress và Thư Giãn"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Foreground="#37474F"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <!-- Các nút điều hướng -->
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,20">
+                    <Button Content="Stress Analysis"
+        Width="140" Height="40"
+        Margin="10"
+        Click="StressAnalysis_Click"
+        Background="#FF6F61" Foreground="White"
+        FontWeight="Bold"
+        BorderBrush="#D84315"
+        BorderThickness="1"
+        Cursor="Hand"/>
+
+                    <Button Content="Relax Zone"
+        Width="140" Height="40"
+        Margin="10"
+        Click="RelaxZone_Click"
+        Background="#4DB6AC" Foreground="White"
+        FontWeight="Bold"
+        BorderBrush="#00796B"
+        BorderThickness="1"
+        Cursor="Hand"/>
+
+                </StackPanel>
+
+                <!-- Nội dung động -->
+                <Frame x:Name="MainContent"
+                       Width="Auto"
+                       Height="Auto"
+                       Background="#FAFAFA"
+                       BorderThickness="0"/>
             </StackPanel>
-            <Frame  x:Name="MainContent">
-            </Frame>
-            <!-- Nội dung động -->
-        </StackPanel>
+        </Border>
     </Grid>
 </Window>
