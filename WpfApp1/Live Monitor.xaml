@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="WpfApp1.Live_Monitor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Background="#FFF0F4F8">
+        <Border Background="White" CornerRadius="10" Padding="20" Margin="30" BorderBrush="#DDD" BorderThickness="1">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+
+                <!-- Tiêu đề -->
+                <TextBlock Text="Live Monitor" FontSize="26" FontWeight="Bold" Foreground="#37474F" Margin="0,0,0,30" TextAlignment="Center"/>
+
+                <!-- Heart Rate -->
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="❤️  Heart Rate:" FontSize="18" FontWeight="SemiBold" Width="140"/>
+                    <TextBlock x:Name="HeartRateText" FontSize="18" Foreground="DarkRed"/>
+                </StackPanel>
+
+                <!-- SpO2 -->
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="🩸  SpO2:" FontSize="18" FontWeight="SemiBold" Width="140"/>
+                    <TextBlock x:Name="SpO2Text" FontSize="18" Foreground="DarkBlue"/>
+                </StackPanel>
+
+                <!-- HRV -->
+                <StackPanel Orientation="Horizontal" Margin="0,10">
+                    <TextBlock Text="📈  HRV (RMSSD):" FontSize="18" FontWeight="SemiBold" Width="140"/>
+                    <TextBlock x:Name="HRVText" FontSize="18" Foreground="DarkGreen"/>
+                </StackPanel>
+
+                <!-- Button -->
+                <Button Content="🔌 Kết nối ESP32"
+                        Width="200" Height="40"
+                        Margin="0,30,0,0"
+                        Click="Connect_Click"
+                        Background="#4CAF50"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        BorderBrush="#388E3C"
+                        Cursor="Hand"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

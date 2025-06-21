@@ -8,8 +8,12 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+        private void LiveMonitor_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new Live_Monitor(); // Gọi UserControl tên Live_Monitor
+        }
 
-       
+
         private void StressAnalysis_Click(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new StressAnalysis(); // Điều hướng đến StressAnalysis

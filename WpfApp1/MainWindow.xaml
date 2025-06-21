@@ -33,6 +33,16 @@
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0,0,0,20">
+                    <Button Content="Live Monitor"
+        Width="140" Height="40"
+        Margin="10"
+        Click="LiveMonitor_Click"
+        Background="#42A5F5" Foreground="White"
+        FontWeight="Bold"
+        BorderBrush="#1E88E5"
+        BorderThickness="1"
+        Cursor="Hand"/>
+
                     <Button Content="Stress Analysis"
         Width="140" Height="40"
         Margin="10"
