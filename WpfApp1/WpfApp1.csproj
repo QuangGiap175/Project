@@ -6,7 +6,17 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+	  <ApplicationIcon>pngtree-red-heartbeat-polyline-image_2247026.ico</ApplicationIcon>
+
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="pngtree-red-heartbeat-polyline-image_2247026.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="pngtree-red-heartbeat-polyline-image_2247026.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.IO.Ports" Version="9.0.6" />
