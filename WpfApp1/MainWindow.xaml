@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Ứng dụng Stress và Thư Giãn" Height="500" Width="850" WindowStartupLocation="CenterScreen"
+        Title="Ứng dụng Stress và Thư Giãn"
+        Height="600" Width="850"
+        WindowStartupLocation="CenterScreen"
         Background="#f0f4f8">
+
     <Grid>
         <!-- Nền gradient nhẹ -->
         <Grid.Background>
@@ -17,9 +20,16 @@
         </Grid.Background>
 
         <!-- Khối nội dung chính -->
-        <Border Background="White" CornerRadius="15" Padding="20"
-                Margin="30">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+        <Border Background="White" CornerRadius="15" Padding="20" Margin="30">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Tiêu đề -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Nút -->
+                    <RowDefinition Height="*"/>
+                    <!-- Frame -->
+                </Grid.RowDefinitions>
 
                 <!-- Tiêu đề -->
                 <TextBlock Text="Ứng dụng Theo Dõi Stress và Thư Giãn"
@@ -31,47 +41,46 @@
 
                 <!-- Các nút điều hướng -->
                 <StackPanel Orientation="Horizontal"
+                            Grid.Row="1"
                             HorizontalAlignment="Center"
                             Margin="0,0,0,20">
                     <Button Content="Live Monitor"
-        Width="140" Height="40"
-        Margin="10"
-        Click="LiveMonitor_Click"
-        Background="#42A5F5" Foreground="White"
-        FontWeight="Bold"
-        BorderBrush="#1E88E5"
-        BorderThickness="1"
-        Cursor="Hand"/>
+                            Width="140" Height="40"
+                            Margin="10"
+                            Click="LiveMonitor_Click"
+                            Background="#42A5F5" Foreground="White"
+                            FontWeight="Bold"
+                            BorderBrush="#1E88E5"
+                            BorderThickness="1"
+                            Cursor="Hand"/>
 
                     <Button Content="Stress Analysis"
-        Width="140" Height="40"
-        Margin="10"
-        Click="StressAnalysis_Click"
-        Background="#FF6F61" Foreground="White"
-        FontWeight="Bold"
-        BorderBrush="#D84315"
-        BorderThickness="1"
-        Cursor="Hand"/>
+                            Width="140" Height="40"
+                            Margin="10"
+                            Click="StressAnalysis_Click"
+                            Background="#FF6F61" Foreground="White"
+                            FontWeight="Bold"
+                            BorderBrush="#D84315"
+                            BorderThickness="1"
+                            Cursor="Hand"/>
 
                     <Button Content="Relax Zone"
-        Width="140" Height="40"
-        Margin="10"
-        Click="RelaxZone_Click"
-        Background="#4DB6AC" Foreground="White"
-        FontWeight="Bold"
-        BorderBrush="#00796B"
-        BorderThickness="1"
-        Cursor="Hand"/>
-
+                            Width="140" Height="40"
+Margin="10"
+                            Click="RelaxZone_Click"
+                            Background="#4DB6AC" Foreground="White"
+                            FontWeight="Bold"
+                            BorderBrush="#00796B"
+                            BorderThickness="1"
+                            Cursor="Hand"/>
                 </StackPanel>
 
-                <!-- Nội dung động -->
+                <!-- Nội dung động (chiếm toàn bộ phần còn lại) -->
                 <Frame x:Name="MainContent"
-                       Width="Auto"
-                       Height="Auto"
+                       Grid.Row="2"
                        Background="#FAFAFA"
                        BorderThickness="0"/>
-            </StackPanel>
+            </Grid>
         </Border>
     </Grid>
 </Window>

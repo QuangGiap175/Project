@@ -5,52 +5,52 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp1"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="760">
+            d:DesignWidth="760">
+    <Grid>
+        <Border Background="#f0f8ff" Padding="25" CornerRadius="12" BorderBrush="#cfd8dc" BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" MaxWidth="500">
 
-    <Border Background="#f0f8ff" Padding="25" CornerRadius="12" BorderBrush="#cfd8dc" BorderThickness="1">
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" MaxWidth="500">
-
-                <!-- Title -->
-                <TextBlock Text="Phân Tích Stress" 
+                    <!-- Title -->
+                    <TextBlock Text="Phân Tích Stress" 
                            FontSize="26" 
                            FontWeight="Bold" 
                            Foreground="#37474F"
                            Margin="0,0,0,25" 
                            HorizontalAlignment="Center"/>
 
-                <TextBlock Text="Nhập thông tin sinh học và chỉ số cảm biến:" 
+                    <TextBlock Text="Nhập thông tin sinh học và chỉ số cảm biến:" 
                            FontSize="16" 
                            Margin="0,0,0,20" 
                            Foreground="#546E7A"/>
 
-                <!-- Grid form -->
-                <Grid Margin="0,0,0,20">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="180"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                    <!-- Grid form -->
+                    <Grid Margin="0,0,0,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="180"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Tuổi:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
-                    <TextBox x:Name="AgeInput" Grid.Row="0" Grid.Column="1" Margin="0,5" Height="30"/>
+                        <TextBlock Text="Tuổi:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
+                        <TextBox x:Name="AgeInput" Grid.Row="0" Grid.Column="1" Margin="0,5" Height="30"/>
 
-                    <TextBlock Text="Nhịp tim (BPM):" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
-                    <TextBox x:Name="BpmInput" Grid.Row="1" Grid.Column="1" Margin="0,5" Height="30"/>
+                        <TextBlock Text="Nhịp tim (BPM):" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
+                        <TextBox x:Name="BpmInput" Grid.Row="1" Grid.Column="1" Margin="0,5" Height="30"/>
 
-                    <TextBlock Text="SpO2 (%):" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
-                    <TextBox x:Name="Spo2Input" Grid.Row="2" Grid.Column="1" Margin="0,5" Height="30"/>
+                        <TextBlock Text="SpO2 (%):" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
+                        <TextBox x:Name="Spo2Input" Grid.Row="2" Grid.Column="1" Margin="0,5" Height="30"/>
 
-                    <TextBlock Text="HRV (RMSSD, ms):" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
-                    <TextBox x:Name="RmssdInput" Grid.Row="3" Grid.Column="1" Margin="0,5" Height="30"/>
-                </Grid>
-                <!-- Button -->
-                <Button Content="Phân tích Stress"
+                        <TextBlock Text="HRV (RMSSD, ms):" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="15" Margin="0,5"/>
+                        <TextBox x:Name="RmssdInput" Grid.Row="3" Grid.Column="1" Margin="0,5" Height="30"/>
+                    </Grid>
+                    <!-- Button -->
+                    <Button Content="Phân tích Stress"
                         Width="160" Height="40"
                         Background="#2196F3"
                         Foreground="White"
@@ -60,8 +60,8 @@
                         Click="AnalyzeStress_Click"
                         Cursor="Hand"/>
 
-                <!-- Kết quả -->
-                <TextBlock x:Name="AnalysisResult"
+                    <!-- Kết quả -->
+                    <TextBlock x:Name="AnalysisResult"
                            FontSize="16"
                            TextWrapping="Wrap"
                            Foreground="#2E7D32"
@@ -69,7 +69,8 @@
                            Padding="10"
                            
                            MaxWidth="700"/>
-            </StackPanel>
-        </ScrollViewer>
-    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
 </UserControl>

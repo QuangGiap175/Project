@@ -9,30 +9,66 @@
 
     <Grid Background="#FFF0F4F8">
         <Border Background="White" CornerRadius="10" Padding="20" Margin="30" BorderBrush="#DDD" BorderThickness="1">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" >
 
                 <!-- Tiêu đề -->
-                <TextBlock Text="Live Monitor" FontSize="26" FontWeight="Bold" Foreground="#37474F" Margin="0,0,0,30" TextAlignment="Center"/>
+                <TextBlock Text="Live Monitor"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Foreground="#37474F"
+                           Margin="0,0,0,30"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"/>
 
                 <!-- Heart Rate -->
-                <StackPanel Orientation="Horizontal" Margin="0,10">
-                    <TextBlock Text="❤️  Heart Rate:" FontSize="18" FontWeight="SemiBold" Width="140"/>
-                    <TextBlock x:Name="HeartRateText" FontSize="18" Foreground="DarkRed"/>
-                </StackPanel>
+                <Grid Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="❤️  Heart Rate:"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Grid.Column="0"/>
+                    <TextBlock x:Name="HeartRateText"
+                               FontSize="18"
+                               Foreground="DarkRed"
+                               Grid.Column="1"/>
+                </Grid>
 
                 <!-- SpO2 -->
-                <StackPanel Orientation="Horizontal" Margin="0,10">
-                    <TextBlock Text="🩸  SpO2:" FontSize="18" FontWeight="SemiBold" Width="140"/>
-                    <TextBlock x:Name="SpO2Text" FontSize="18" Foreground="DarkBlue"/>
-                </StackPanel>
+                <Grid Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="🩸  SpO2:"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Grid.Column="0"/>
+                    <TextBlock x:Name="SpO2Text"
+                               FontSize="18"
+                               Foreground="DarkBlue"
+                               Grid.Column="1"/>
+                </Grid>
 
                 <!-- HRV -->
-                <StackPanel Orientation="Horizontal" Margin="0,10">
-                    <TextBlock Text="📈  HRV (RMSSD):" FontSize="18" FontWeight="SemiBold" Width="140"/>
-                    <TextBlock x:Name="HRVText" FontSize="18" Foreground="DarkGreen"/>
-                </StackPanel>
+                <Grid Margin="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="📈  HRV (RMSSD):"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Grid.Column="0"/>
+                    <TextBlock x:Name="HRVText"
+                               FontSize="18"
+                               Foreground="DarkGreen"
+                               Grid.Column="1"/>
+                </Grid>
 
-                <!-- Button -->
+                <!-- Nút kết nối -->
                 <Button Content="🔌 Kết nối ESP32"
                         Width="200" Height="40"
                         Margin="0,30,0,0"
